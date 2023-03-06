@@ -1,3 +1,5 @@
+import config from '~/config';
+
 import Home from '~/pages/Home';
 
 type Router = {
@@ -10,7 +12,7 @@ type Router = {
 
 export const publicRoutes: Router[] = [
     {
-        path: '/',
+        path: config.routes.home,
         component: Home,
         layout: null,
     },
