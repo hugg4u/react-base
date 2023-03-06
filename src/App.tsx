@@ -1,20 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
-// import { DefaultLayout } from './layouts';
+import { DefaultLayout } from './layouts';
 import { Fragment } from 'react';
 
 function App() {
     return (
         <Router>
-            <>
+            <React.Fragment>
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;
-                        // let Layout = DefaultLayout;
-                        let Layout: React.ExoticComponent<{
-                            children?: React.ReactNode;
-                        }> = Fragment;
+
+                        let Layout: any = DefaultLayout;
 
                         if (route.layout) {
                             Layout = route.layout;
@@ -35,7 +33,7 @@ function App() {
                         );
                     })}
                 </Routes>
-            </>
+            </React.Fragment>
         </Router>
     );
 }
