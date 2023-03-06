@@ -1,6 +1,6 @@
 import Home from '~/pages/Home';
 
-type Route = {
+type Router = {
     path: string;
     component: () => JSX.Element;
     layout?: React.ExoticComponent<{
@@ -8,7 +8,7 @@ type Route = {
     }> | null;
 };
 
-export const publicRoutes: Route[] = [
+export const publicRoutes: Router[] = [
     {
         path: '/',
         component: Home,
@@ -16,4 +16,4 @@ export const publicRoutes: Route[] = [
     },
 ];
 
-export const privateRoutes: Route[] = [];
+export const privateRoutes: Router[] = [];
