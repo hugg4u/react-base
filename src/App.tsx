@@ -12,24 +12,26 @@ function App() {
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;
                         // let Layout = DefaultLayout;
+                        let Layout: React.ExoticComponent<{
+                            children?: React.ReactNode;
+                        }> = Fragment;
 
                         if (route.layout) {
-                            // Layout = route.layout;
+                            Layout = route.layout;
                         } else if (route.layout === null) {
-                            // Layout = Fragment;
+                            Layout = Fragment;
                         }
 
                         return (
-                            <></>
-                            // <Route
-                            //     key={index}
-                            //     path={route.path}
-                            //     element={
-                            //         // <Layout>
-                            //             // <Page />
-                            //         // </Layout>
-                            //     }
-                            // />
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={
+                                    <Layout>
+                                        <Page />
+                                    </Layout>
+                                }
+                            />
                         );
                     })}
                 </Routes>
