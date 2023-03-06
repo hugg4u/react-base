@@ -15,7 +15,7 @@ export const post = async (path: string, req?: any, headers?: any) => {
 };
 
 export const put = async (path: string, req: any, headers?: any) => {
-    const response = await request.get(path, req);
+    const response = await request.put(path, req, headers);
     return response;
 };
 
