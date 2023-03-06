@@ -1,10 +1,9 @@
 @import 'normalize.css';
-@import '~bootstrap/scss/bootstrap';
 
 :root {
     // --primary: #007fff;
     // --black: #000;
-    // --text-color: #161823;
+    --text-color: #161823;
     // --white: #fff;
 
     //Default layout
@@ -12,7 +11,7 @@
     // --default-layout-width: 100%;
     // --default-layout-horizontal-spacer: 24px;
 
-    // --font-family: 'ProximaNova', sans-serif;
+    --font-family: 'ProximaNova', sans-serif;
 }
 * {
     margin: 0;
